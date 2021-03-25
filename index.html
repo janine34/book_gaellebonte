@@ -1,0 +1,476 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+	<title>Gaëlle Bonte</title>
+
+    <style type="text/css">
+
+
+
+
+.column{
+  position:relative;
+    }
+
+/*.hero-video, .image.is-16by9 .has-ratio, .image.is-16by9 img, .image.is-1by1 .has-ratio, .image.is-1by1 img, .image.is-1by2 .has-ratio, .image.is-1by2 img, .image.is-1by3 .has-ratio, .image.is-1by3 img, .image.is-2by1 .has-ratio, .image.is-2by1 img, .image.is-2by3 .has-ratio, .image.is-2by3 img, .image.is-3by1 .has-ratio, .image.is-3by1 img, .image.is-3by2 .has-ratio, .image.is-3by2 img, .image.is-3by4 .has-ratio, .image.is-3by4 img, .image.is-3by5 .has-ratio, .image.is-3by5 img, .image.is-4by3 .has-ratio, .image.is-4by3 img, .image.is-4by5 .has-ratio, .image.is-4by5 img, .image.is-5by3 .has-ratio, .image.is-5by3 img, .image.is-5by4 .has-ratio, .image.is-5by4 img, .image.is-9by16 .has-ratio, .image.is-9by16 img, .image.is-square .has-ratio, .image.is-square img, .is-overlay, .modal, .modal-background{
+    position: fixed;
+}*/
+
+
+
+.navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover{
+  color: red;
+  text-decoration: underline;
+  background-color: white;
+  transition: background .6s cubic-bezier(.77,0,.175,1);
+}
+.navbar-menu {
+  background-color: white;
+  color: black;
+}
+
+.navbar-link, a.navbar-item{
+  padding-right: 2rem;
+  color: black;
+
+}
+
+.navbar-item{
+  width: auto;
+  background-color: white;
+  padding-left: 2rem;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+.content{
+  color: black;
+    }
+
+.title, .subtitle,.subtitle-2{
+  color: black;
+}
+
+section .image img{
+  max-width:100%;
+  transition: 1s;
+}
+
+section .image2 img{
+  max-width:50%;
+  transition: 1s;
+}
+
+.block:not(:last-child), .box:not(:last-child), .breadcrumb:not(:last-child), .content:not(:last-child), .highlight:not(:last-child), .level:not(:last-child), .message:not(:last-child), .notification:not(:last-child), .pagination:not(:last-child), .progress:not(:last-child), .subtitle:not(:last-child), .table-container:not(:last-child), .table:not(:last-child), .tabs:not(:last-child), .title:not(:last-child){
+  padding: 0.1;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  border:none;
+  border-top: 2px solid black;
+}
+
+section{
+  padding: 3rem;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+ 
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: transparent;
+  display: none;
+  overflow: hidden;
+  box-shadow: none;
+  max-height: 0;
+  transition: 1s ease-in-out;
+   
+}
+
+
+
+.accordion:after {
+  content: '▼'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+  transition: 1s ease-in-out;
+}
+
+.active:after {
+  content: "▲"; /* Unicode character for "minus" sign (-) */
+
+}
+
+a {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  background-color: none;
+  text-decoration: underline;
+}
+
+.button {
+  /* background-color: #fff; */
+  border-color: black;
+  border-width: 1px;
+  color: black;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.button.is-normal {
+ font-family: 'Poppins', sans-serif;
+}
+
+.button:hover{
+  background-color: black;
+
+}
+
+.button:hover a {
+  color: white;
+  text-decoration: none;
+  transition: background .9s cubic-bezier(.77,0,.175,1);
+}
+
+.icon{
+  padding:2rem;
+}
+
+.column{
+  font-family:  'Poppins', sans-serif;
+}
+
+div.content-social{
+  display: flex;
+  justify-content: center;
+}
+
+.footer{
+  padding: 2rem;
+  background-color: white;
+}
+
+p {
+
+  font-family: 'Poppins', sans-serif;
+}
+.title, .subtitle, .subtitle-2 {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+a:hover{
+  color: red;
+}
+
+    </style>
+</head>
+
+<body>
+	<section class="hero is-fullheight">
+    <div class="hero-head">
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <div class="navbar-item">
+            <img class="image is-28x28" src="img/stream-320-icone1.png" alt="Logo">
+          </div>
+         <!--  <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span> -->
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenuHeroA">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end has-text-weight-semibold">
+            <a href="#about" class="navbar-item has-text-weight-light is-uppercase is-size-5">
+              About
+            </a>            
+            <a href="#projects" class="navbar-item has-text-weight-light is-uppercase is-size-5">
+              Projects
+            </a>
+            <a href="#contact" class="navbar-item has-text-weight-light is-uppercase is-size-5">
+              Contact
+            </a>
+          </div>
+        </div>
+    </nav>
+  </div>
+  <div class="hero-body">
+    <div class="container">
+      <div class="container">   
+        <div class="name-1">
+          <h1 class="title is-size-1 has-text-weight-light is-uppercase ">
+            Gaëlle Bonte - Digital Designer
+          </h1>
+    
+          <h3 class="subtitle-2 is-size-4 is-italic">
+            Designer passionate about digital and art, <br/>
+            I am looking for an intership as UI/UX designer.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">           
+  <div class="content">
+    <div class="container">  
+          <div class="subtitle has-text-weight-light is-uppercase is-size-5">
+            About
+          </div>  
+ <div class="columns ">
+        <div class="column is-half">
+
+            <h5 class=" is-size-6">I am Gaëlle a student passionate about design, art and digital media. For the last two years, I have been studying design, art and media at Sorbonne university in Paris. More specifically my research focuses on web design, UI/UX and development. </h5>
+           <p class= "is-size-6">
+            In the past years, I worked for a photographer agency <a href=""> Agence Vu</a> as editorial assistant and in a start-up incubator <a href="">Creative Valley</a> as assistant of the head of communication.</p>
+            <p> I am looking forward new experiences in the field of digital design.</p>
+              
+            
+          <button  class="button is-ghost  ">
+            <a class=" is-size-6 has-text-weight-semibold"href="img/CV_GaelleBonte.pdf" target="_blank" download> DOWNLOAD CV</a>
+          </button> 
+          
+           </div>
+          <div class="column is-half">
+            <figure class="image2 is-130x130">
+              <img class="image2"src="img/grossepanthère.jpg">
+            </figure>
+             </div>
+          </div>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section>           
+  <div class="content">
+    <div class="container">   
+      <div id="projects" class="subtitle has-text-weight-light is-uppercase is-size-5">
+        Projects
+      </div>
+        <button class="accordion has-text-weight-semibold is-size-5">  
+        The Turning Point - Data visualization
+        </button>
+      <div class="panel">
+        <div class="columns">
+          <div class="column is-half">
+            <div class="subtitle-2 has-text-weight-normal">
+              Turning point is a collection of Data and Information displayed in a visually appealing journey where we discover the factors and the threats of our sixth mass extinction of species. We decided to design our graphs with Illustrator to create a strong visual identity in black and white. Our website is constantly evolving as we dive deeper in the problem. 
+              Through this journey you can discover and analyse the evolution of our nature and where we are now. Suddenly everything is changing in a very rapid pace yet where is the turning point ? Did we miss it? Are we at the end of the extinction or at the beginning? Did we miss our chance to save our planet? <br/>
+              <strong> Click on the image to access to website.</strong>
+            </div>
+              <div class="subtitle-3 has-text-weight-light is-uppercase">
+                Illustrator - Excel - Html - CSS - Javascript
+              </div>
+          </div>
+            <div class="column is-half">
+              <div class="image">
+                <a href="https://janine34.github.io/turningpoint/" target="_blank">
+                  <img src='img/turning_img2.png' onmouseover="this.src='img/turning_img.png';" onmouseout="this.src='img/turning_img2.png';" />
+                </a>
+              </div>
+            </div>
+        </div> 
+      </div>
+        <button class="accordion has-text-weight-semibold is-size-5">  
+          Fordlândia - UI/UX   
+        </button>
+          <div class="panel">
+            <div class="columns">
+                <div class="column is-half">
+                  <div class="subtitle-2 has-text-weight-normal">
+                    Creation of template website to promote events in connection with the arts research laboratory ACTE at the University of Paris 1 Panthéon-Sorbonne. Here we took as an example the exhibition Mapping Fordlândia of the collective Suspended Spaces attached to the research laboratory, description of the event, contextualization of the project and promotion of the collective.
+                    Realization of UX/UI models on Figma, development of a Wordpress theme to come.<br/>
+                    <strong> Click on the image to access to wireframes.</strong>
+                  </div> 
+                    <div class="subtitle-3 has-text-weight-light is-uppercase">
+                      Figma - Wordpress - PHP - Bulma
+                    </div>  
+                      </div>
+                <div class="column is-half">
+                  <div class="image">
+                    <a href="https://www.figma.com/proto/x5LNNik9NhPjbSAg9kkrkC/ACTE-%26-Fordl%C3%A2ndia?node-id=682%3A59&scaling=min-zoom" target="_blank">
+                      <img src='img/fordlandia_img1.png' onmouseover="this.src='img/fordlandia_img2.png';" onmouseout="this.src='img/fordlandia_img1.png';" />
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+            <button class="accordion has-text-weight-semibold is-size-5">  
+              IMU Magzine - Editorial - Artistic direction - Graphic design 
+            </button>
+              <div class="panel">
+                <div class="columns">
+                  <div class="column is-half">
+                    <div class="subtitle-2 has-text-weight-normal">
+                      IMU is a magazine about sustainable fashion and lifestyle. I worked on the visual identity, created the logo with linocut, I used a sustainable type named Ryman Eco which with its thin lines is supposed to reduce the use of ink by diffusing it through the spaces and fill them on the paper. Here, I chose to highlight the font and its spaces using it as a stamp, we can find it on the cover and chapter title in the magazine.
+                      For this first edition, I played on opacity on different kind of picture, to put in contrast plant, city and fabrics, to create a new kind of visual texture.
+                      On the content, I picked up articles and interviews from different media about fast fashion, ethic, sustainable fashion designer and societal topic about ecology.
+                    </div> 
+                      <div class="subtitle-3 has-text-weight-light is-uppercase">
+                        Indesign - Photoshop - Linocut
+                      </div>   
+                        <figure class="image1">
+                          <img class="sommaire" src="img/sommairebook.jpg">
+                        </figure> 
+                  </div>
+                  <div class="column is-half">
+                    <div class="image1">
+                      <figure class="image1">
+                        <img class="image1" src="img/couvbook.jpg" alt="IMU">
+                      </figure>
+                    </div>                               
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column is-half">
+                    <div class="image1">
+                      <figure class="image1">
+                        <img class="" src="img/rouefleurbook.jpg" alt="IMU">
+                      </figure>
+                    </div>                               
+                  </div>
+                  <div class="column is-half">
+                    <div class="image1">
+                      <figure class="image1">
+                        <img class="" src="img/interviewfleurbook.jpg" alt="IMU">
+                      </figure>
+                    </div>                               
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column is-half">
+                    <div class="image1">
+                      <figure class="image1">
+                        <img class="" src="img/carlottabook.jpg" alt="IMU">
+                      </figure>
+                    </div>                               
+                  </div>
+                  <div class="column is-half">
+                    <div class="image1">
+                      <figure class="image1">
+                        <img class="" src="img/carlottaintbook.jpg" alt="IMU">
+                      </figure>
+                    </div>                               
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+<footer id="contact" class="footer">
+  <p class="has-text-weight-normal has-text-centered">
+    Contact me
+  </p>
+    <div class="content-social">
+      <span class="icon is-medium">
+        <a href="https://www.linkedin.com/in/ga%C3%ABlle-bonte-4760b0122/" target="_blank">
+          <i class="fab fa-linkedin fa-3x"> </i>
+        </a>
+      </span>
+
+      <span class="icon is-medium">
+        <a href="https://www.behance.net/bontegaell0503?tracking_source=search_users_recommended%7Cgaelle%20bonte" target="_blank">
+          <i class="fab fa-behance-square fa-3x"></i>
+        </a>  
+      </span>
+
+      <span class="icon is-medium">
+        <a href="mailto:bontegaelle@gmail.com" target="_blank">
+        <i class="fas fa-envelope-square fa-3x"></i>
+        </a>
+      </span>
+      </div>
+</footer>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+}
+</script>
+</body>
+</html>
